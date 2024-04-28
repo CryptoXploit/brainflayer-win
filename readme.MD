@@ -158,4 +158,4 @@ and optimized routines for ec addition and doubling.
 
 Tutorials
 ---------
-Visit https:\\www.cryptoxploit.com
+Visit https://www.cryptoxploit.com

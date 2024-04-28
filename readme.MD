@@ -43,15 +43,15 @@ Usage
 
 Precompute the bloom filter:
 
-`hex2blf example.hex example.blf`
+`hex2blf.exe example.hex example.blf`
 
 Run Brainflayer against it:
 
-`brainflayer -v -b example.blf -i phraselist.txt`
+`brainflayer.exe -v -b example.blf -i phraselist.txt`
 
 or
 
-`your_generator | brainflayer -v -b example.blf`
+`your_generator | brainflayer.exe -v -b example.blf`
 
 ### Advanced
 
@@ -121,7 +121,7 @@ It's possible to combine two or more of these, e.g. the default is `-c uc`.
 An incremental private key brute force mode is available for fans of
 [directory.io](http://www.directory.io/), try
 
-`brainflayer -v -I 0000000000000000000000000000000000000000000000000000000000000001 -b example.blf`
+`brainflayer.exe -v -I 0000000000000000000000000000000000000000000000000000000000000001 -b example.blf`
 
 See the output of `brainflayer -h` for more detailed usage info.
 
@@ -144,7 +144,7 @@ Compiled executables files list-
 7.hexln.exe
 ```
 
-Supported build target is currently Ubuntu 20.04+ on amd64/x86_64.
+Supported OS is currently Windows 7 and above on amd64/x86_64.
 
 
 Authors

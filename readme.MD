@@ -36,6 +36,22 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
+Building
+--------
+
+just download the windows binaries and you are good to go.
+Compiled executables files list-
+1.blfchk.exe
+2.brainflayer.exe
+3.crunch_win.exe
+4.ecmtabgen.exe
+5.filehex.exe
+6.hex2blf.exe
+7.hexln.exe
+```
+
+Supported OS is currently Windows 7 and above on amd64/x86_64.
+
 Usage
 -----
 
@@ -52,6 +68,49 @@ Run Brainflayer against it:
 or
 
 `your_generator | brainflayer.exe -v -b example.blf`
+
+---
+
+bitcoin puzzle
+pip3 install bit
+python3 puzzle.py < bit >
+example for 66 bit puzzle :
+
+python3 puzzle.py 66
+0000000000000000000000000000000000000000000000034f7030c8aaf422e7
+0000000000000000000000000000000000000000000000035d554e690b893e41
+0000000000000000000000000000000000000000000000029eb02aa6cc332be6
+0000000000000000000000000000000000000000000000028da2e6c49a202655
+...
+python3 puzzle 66 | ./brainflayer -v -c c -b 66.blf -t priv -x -o output.txt
+rate:   9038.34 p/s found:     0/24576      elapsed:    2.594 s
+...
+mnemonics word
+python3 mnemonics.py < number of mnemonics word >
+example for 12 mnemonics word :
+
+python3 mnemonics.py 12
+picture waste cruel riot lady lift venture path erode sauce narrow expose
+angry final exotic raccoon stable sibling start shoe leopard salon bag knife
+wool horn jar only curtain sail journey fog come dentist boss aunt
+brisk card hazard theme patch badge text slab absurd donate predict where
+...
+python3 mnemonics.py 12 | ./brainflayer -v -b btc-addess.blf -o output.txt
+rate:  23744.46 p/s found:     0/49152      elapsed:    2.097 s
+...
+minikey
+python3 minikey.py < 22 | 30 >
+example for 22 minikey :
+
+python3 minikey.py 22
+SXmQMA5szCKoPkhfu3i8G4
+S4G8i3ufhkPoKCzs5AMQmX
+SsuTCqJDwVX536dFRyUkSn
+SnSkUyRFd635XVwDJqCTus
+...
+python3 minikey.py 22 | ./brainflayer -v -b minikey.blf -o output.txt
+rate:  23744.46 p/s found:     0/49152      elapsed:    2.097 s
+...
 
 ### Advanced
 
@@ -129,22 +188,6 @@ Also included is `blfchk` - you can pipe it hex encoded hash160 to check a
 bloom filter file for. It's very fast - it can easily check millions of
 hash160s per second. Not entirely sure what this is good for but I'm sure
 you'll come up with something.
-
-Building
---------
-
-just download the windows binaries and you are good to go.
-Compiled executables files list-
-1.blfchk.exe
-2.brainflayer.exe
-3.crunch_win.exe
-4.ecmtabgen.exe
-5.filehex.exe
-6.hex2blf.exe
-7.hexln.exe
-```
-
-Supported OS is currently Windows 7 and above on amd64/x86_64.
 
 
 Authors

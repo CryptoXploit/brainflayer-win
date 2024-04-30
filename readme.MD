@@ -82,7 +82,7 @@ python3 puzzle.py 66
 0000000000000000000000000000000000000000000000029eb02aa6cc332be6
 0000000000000000000000000000000000000000000000028da2e6c49a202655
 ...
-python3 puzzle 66 | ./brainflayer -v -c c -b 66.blf -t priv -x -o output.txt
+python3 puzzle 66 | brainflayer.exe -v -c c -b 66.blf -t priv -x -o output.txt
 rate:   9038.34 p/s found:     0/24576      elapsed:    2.594 s
 ...
 mnemonics word
@@ -95,7 +95,7 @@ angry final exotic raccoon stable sibling start shoe leopard salon bag knife
 wool horn jar only curtain sail journey fog come dentist boss aunt
 brisk card hazard theme patch badge text slab absurd donate predict where
 ...
-python3 mnemonics.py 12 | ./brainflayer -v -b btc-addess.blf -o output.txt
+python3 mnemonics.py 12 | brainflayer.exe -v -b btc-addess.blf -o output.txt
 rate:  23744.46 p/s found:     0/49152      elapsed:    2.097 s
 ...
 minikey
@@ -108,7 +108,7 @@ S4G8i3ufhkPoKCzs5AMQmX
 SsuTCqJDwVX536dFRyUkSn
 SnSkUyRFd635XVwDJqCTus
 ...
-python3 minikey.py 22 | ./brainflayer -v -b minikey.blf -o output.txt
+python3 minikey.py 22 | brainflayer.exe -v -b minikey.blf -o output.txt
 rate:  23744.46 p/s found:     0/49152      elapsed:    2.097 s
 ...
 
